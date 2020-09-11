@@ -11,8 +11,8 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig)
 
-const database = firebase.database
+const database = firebase.database()
 
 export { firebase, database as default }
 
-// apiKey: process.env.FIREBASE_API_KEY,
+

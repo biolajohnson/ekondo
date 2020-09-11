@@ -6,6 +6,7 @@ import AppRouter from './routers/AppRouter'
 import 'normalize.css/normalize.css'
 import './styles/style.scss'
 import './firebase/firebase'
+import { startSetExpense, setExpense } from './actions/expenses'
 
 
 const store = configureStore()
@@ -15,6 +16,9 @@ const jsx = (
         <AppRouter />
     </Provider>
 )
+ReactDOM.render(<p>loading...</p>, document.getElementById('app'))
 
+store.dispatch(startSetExpense()).then(() => {
+    ReactDOM.render(jsx, document.getElementById('app'))
+})
 
-ReactDOM.render(jsx, document.getElementById('app'))
