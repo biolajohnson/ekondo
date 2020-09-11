@@ -6,7 +6,7 @@ import AppRouter from './routers/AppRouter'
 import 'normalize.css/normalize.css'
 import './styles/style.scss'
 import './firebase/firebase'
-import { startSetExpense, setExpense } from './actions/expenses'
+import { startSetExpense } from './actions/expenses'
 
 
 const store = configureStore()
